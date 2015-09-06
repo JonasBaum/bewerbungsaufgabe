@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="resource/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resource/css/style.css">
+    <title>Web Storage API Bewerbungsaufgabe</title>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="backgroundColor">
+    <div class="container">
+        <h1 class="mainTitle">Web storage background color and html5 audio</h1>
+
+        <div class="row center-block ">
+            <div class="col-xs-6 col-md-4">
+                <form>
+                    <div class="form-group">
+                        <label for="bgcolor">Choose font color:</label>
+                        <input class="form-control color" id="bgcolor" value="FFFFFF">
+                    </div>
+                    <div class="form-group">
+                        <label for="audioItem">Choose a song:</label>
+                        <select class="form-control" id="audioItem">
+                            <option value="Take_A_Chance_On_Me" selected>Take A Chance On Me</option>
+                            <option value="Knowing_Me_Knowing_You">Knowing Me, Knowing You</option>
+                            <option value="I_Have_A_Dream">I Have A Dream</option>
+                            <option value="Money_Money_Money">Money, Money, Money</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input id="audioAutoPlay" type="checkbox"> auto play
+                        </label>
+                    </div>
+
+                </form>
+                <div>
+                    <audio controls="controls" id="audio">
+                        <source id="oggSource" src="resource/audio/Take_A_Chance_On_Me.ogg" type="audio/ogg">
+                        <source id="mp3Source" src="resource/audio/Take_A_Chance_On_Me.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+            </div>
+            <div class="col-xs-6 col-md-4">
+
+                <div>
+                    <h3>Time first populated storage:</h3>
+
+                    <p id="firstStoredDateTime">
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Time storage updated:</h3>
+
+                    <p id="updatedDateTime">
+
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="resource/js/script.js"></script>
+<script src="resource/libraries/jscolor/jscolor.js"></script>
+</html>
