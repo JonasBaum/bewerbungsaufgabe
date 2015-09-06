@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="resource/css/bootstrap.min.css">
     <link rel="stylesheet" href="resource/css/style.css">
     <title>Web Storage API Bewerbungsaufgabe</title>
-
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -16,15 +15,19 @@
 <body>
 <div id="backgroundColor">
     <div class="container">
-        <h1 class="mainTitle">Web storage background color and html5 audio</h1>
+        <h1 class="mainTitle">Web Storage HTML5 Bewerbungsaufgabe</h1>
 
         <div class="row center-block ">
             <div class="col-xs-6 col-md-4">
                 <form>
+                    <!-- start color picker -->
                     <div class="form-group">
-                        <label for="bgcolor">Choose font color:</label>
+                        <label for="bgcolor">Choose a background-color:</label>
                         <input class="form-control color" id="bgcolor" value="FFFFFF">
                     </div>
+                    <!-- end color picker -->
+
+                    <!-- start choose music -->
                     <div class="form-group">
                         <label for="audioItem">Choose a song:</label>
                         <select class="form-control" id="audioItem">
@@ -34,14 +37,17 @@
                             <option value="Money_Money_Money">Money, Money, Money</option>
                         </select>
                     </div>
+                    <!-- end choose music -->
 
-                    <div class="checkbox">
+                    <!-- start auto play -->
+                    <div class="checkbox form-group">
                         <label>
                             <input id="audioAutoPlay" type="checkbox"> auto play
                         </label>
                     </div>
-
+                    <!-- end auto play -->
                 </form>
+                <!-- start html5 audio player -->
                 <div>
                     <audio controls="controls" id="audio">
                         <source id="oggSource" src="resource/audio/Take_A_Chance_On_Me.ogg" type="audio/ogg">
@@ -49,29 +55,40 @@
                         Your browser does not support the audio element.
                     </audio>
                 </div>
-
+                <!-- end html5 audio player -->
             </div>
+            <!-- start html5 storage control -->
             <div class="col-xs-6 col-md-4">
-
                 <div>
                     <h3>Time first populated storage:</h3>
-
-                    <p id="firstStoredDateTime">
-                    </p>
+                    <p id="firstStoredDateTime"></p>
                 </div>
-
                 <div>
                     <h3>Time storage updated:</h3>
-
-                    <p id="updatedDateTime">
-
-                    </p>
+                    <p id="updatedDateTime"></p>
                 </div>
-
+                <div>
+                    <h3>Stored values:</h3>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Background-color</th>
+                                <th>Song</th>
+                                <th>Auto Play</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="storedValueColor"></td>
+                                <td id="storedValueSong"></td>
+                                <td id="storedValueAutoPlay"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-
+            <!-- end html5 storage control -->
         </div>
-
     </div>
 </div>
 </body>

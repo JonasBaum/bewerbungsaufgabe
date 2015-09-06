@@ -6,3 +6,8 @@
 .container{
     background-color: #FFFFFF;
 }
+
+.mainTitle{
+    text-align: center;
+    margin-bottom: 50px;
+}
